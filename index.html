@@ -1,155 +1,375 @@
+
 <!DOCTYPE html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kim &middot; Cooperrider/title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<META name="description" content="Undergraduate computer science student eager to learn more about web development.">
-<META name="keywords" content="web developer, student, computer science, software engineer, front-end, creative, undergraduate, intern, web application, development">
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Nixie+One|Cabin|Rock+Salt' rel='stylesheet' type='text/css'>
 
-<title>Kim Coop</title>
+    <style>
 
-<!--[if IE]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    body {
+      padding-bottom: 40px;
+      color: #777;
+      font-family: 'Cabin';
+    }
 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/functions.js"></script>
 
-<link href='http://fonts.googleapis.com/css?family=Cabin|Droid+Sans|Nixie+One|Rock+Salt' rel='stylesheet' type='text/css'>
-<link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="stylesheets/styles.less" rel="stylesheet">
 
-<link rel="stylesheets/styles.css">
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
 
-</head>
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
 
-<body>
+    }
 
-    <div class="container">
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
 
-      <div class="span12">    
-        <nav id="navbar">
-          <ul class="nav nav-pills">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#volunteerism">Volunteerism</a></li>
-          </ul>
-        </nav>
-      </div>
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
 
-      <div class="jumbotron well">
-        <h1>Hi, I'm Kim.</h1>
-        <p class="lead">Web developer by day, CS undergrad by night. I'm currently wrapping up my degree at the University of Pittsburgh. I was born and raised just outside of Philadelphia and currently reside in Pittsburgh (ie I understand both "hoagie" and "yinz").</p>
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
 
-        <p>I love to travel. I speak French and make frequent, heartfelt attempts at Spanish. I'm hopelessly addicted to Diet Coke. I like running, hanging with friends, and frozen yogurt. My favorite place in the world is Spooner, Wisconsin, followed by Plitvice, Croatia.</p>
-        
-        <p>My programming life started with a TI calculator and a Myspace page. I love solving problems, especially when I'm part of a great team. Both web and mobile fascinate me, and I'm always up for learning something new.</p>
-        
-        <p>Email me at <a class="special" href="mailto:kim.cooperrider&#64;&#103;&#109;&#97;&#105;&#108;&#46;com">kim.cooperrider&#64;&#103;&#109;&#97;&#105;&#108;&#46;com.</a>&nbsp;&nbsp;
-        
-        <a href="http://www.linkedin.com/pub/kim-cooperrider/39/828/2b8" style="text-decoration:none;">
-          <img src="http://www.linkedin.com/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Kim Cooperrider's LinkedIn profile" style="vertical-align:middle" border="0">
-        </a>
-      </div>
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
 
-      <div class="row">
-        <div class="span12">
 
-          <div class="row">
-            <div class="span2">
-              <h2>Skills</h2>
-            </div>
 
-            <div class="span3">
-              <h2>Education</h2>
-            </div>
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
 
-            <div class="span2">
-              <h2>Volunteer</h2>
-            </div>
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 40px;
+    }
 
-          </div>
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      color: #09a;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+      font-family: 'Rock Salt';
+    }
+
+    #intro {
+      min-height: 1em;
+    }
+
+    .word {
+      text-shadow: 0 1px 0 #fff;
+      opacity: 0.6;
+      transition: opacity 0.6s;
+      -moz-transition: opacity 0.6s;
+      -webkit-transition: opacity 0.6s;
+      -o-transition: opacity 0.6s;
+    }
+
+    .word:hover {
+      opacity: 1;
+    }
+
+    p a {
+      color: #09a;
+      font-weight: bold;
+    }
+
+    .email-reverse {
+      color: #09a;
+      font-weight: bold;
+      unicode-bidi: bidi-override;
+      direction: rtl;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/spooner_1.jpg" alt="">
         </div>
-
+        <div class="item">
+          <img src="img/spooner_2.jpg" alt="">
+        </div>
       </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+
+    <div class="container marketing">
   
-    </div> <!-- .container-narrow -->
-    <div class="container">
+        <h2 class="featurette-heading" id="intro"></h2>
+        <p id="content" class="lead"></p>
 
-        <hr />
+      <hr class="featurette-divider">
 
-        <h2>Experience</h3>
-
-         <div class="row">
-            <div class="span12">
-              <h4>Software Engineer <small>Kemists - Pittsburgh, PA</small></h4>
-              <div class="span2 pull-right">9/2012 - present</div>
-              <div class="span6">
-                <p>Web development and collaboration in a small, agile team environment. Ruby on Rails</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="span12">
-              <h4>Software Engineering Intern <small>Kemists - Remote/Pittsburgh, PA</small></h4>
-              <div class="span2 pull-right">6/2012 - 9/2012</div>
-              <div class="span6">
-                <p>iPhone app development. Objective-C, Ruby on Rails</p>
-              </div>
-            </div>
-          </div>
-            
-          <div class="row">
-            <div class="span12">
-              <h4>Web Developer <small>University of Pittsburgh - Pittsburgh, PA</small></h4>
-              <div class="span2 pull-right">1/2012 - 9/2012</div>
-              <div class="span6">
-                <p>Improvements and updates to several University Student Affairs sites. CSS, HTML, jQuery, PHP</p>
-              </div>
-            </div>
-          </div>
-            
-          <div class="row">
-            <div class="span12">
-              <h4>Web Development Intern <small>Fireman Creative - Pittsburgh, PA</small></h4>
-              <div class="span2 pull-right">9/2011 - 12/2011</div>
-              <div class="span6">
-                <p>Developed front- and back-end features for client websites. CSS, CodeIgniter, HTML, jQuery, PHP</p>
-              </div>
-            </div>
-          </div>
-            
-          <div class="row">
-            <div class="span12">
-              <h4>Technology Research Intern <small>The Bank of New York Mellon - Pittsburgh, PA</small></h4>
-              <div class="span2 pull-right">6/2011 - 9/2011</div>
-              <div class="span6">
-                <p>Reengineered a Sencha Touch iPad app into a mobile website as a proof-of-concept. CSS, HTML, jQuery, jQuery Mobile, jQTouch</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="span12">
-            <h4>Web Application Development Intern <small>ModCloth - Pittsburgh, PA</small></h4>
-            <div class="span2 pull-right">5/2010 - 11/2010</div>
-            <div class="span6">
-              <p>Developed front- and back-end features for the eCommerce site. CSS, HTML, JavaScript, SQL, Ruby on Rails.</p>
-              </div>
-            </div>
-          </div>
-                
-        </div><!-- experience -->
-
-        <hr />
-
-      <div><!-- .container -->
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right">
+          
+            <a class="muted" href="http://www.linkedin.com/in/kimcooperrider">
+              <i class="icon-linkedin-sign"></i>
+              View me on LinkedIn
+            </a>
+            &nbsp;
+          <span class="email-reverse muted">moc.liamg@redirrepoocmik</span>
+        </p>
+      </footer>
 
 
+    </div><!-- /.container -->
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+      content = "I like making cool things with great people. I do primarily web programming in Rails and JavaScript (AngularJS ftw), although I like mobile too. I'm currently working at Kemists and finishing my BS in computer science at Pitt. Other things I enjoy: traveling, Battlestar marathons, my friends, speaking French, volunteering at tech conferences, green smoothies, pretending I can speak more than five words in  Spanish, and spending time in Northern Wisconsin (pictured above)."
+      spannified_content = '';
+
+      $.each( content.split(' '), function( index, word ) {
+        spannified_content += ( '<span class="word">'+ word +' </span>' );
+      });
+
+      $('#content').append( spannified_content );
+
+      el = $('#intro');
+      text = "Hello! I'm Kim.";
+      full_length = text.length;
+      curr_length = 0;
+
+      setInterval( function() {
+        if ( curr_length < full_length ) {
+          el.append( text[curr_length] );
+          curr_length += 1;
+        }
+      }, 100);
+
+    });
+    </script>
+    
   </body>
 </html>
