@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<head>
+
+<META name="description" content="Undergraduate computer science student eager to learn more about web development.">
+<META name="keywords" content="web developer, student, computer science, software engineer, front-end, creative, undergraduate, intern, web application, development">
+
+<title>Kim Coop</title>
+
+<!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+$(function() {
+  
+  $('#last-name').fadeTo(12800, 1);
+  $('#first-name').delay(300).fadeTo(12000, .2);
+
+  $('.icon-container').on('click', function() {
+    activeSection = $(this).data('section');
+    left = $("div[data-content="+ activeSection +"]").position().left;
+    $("#display-area-wrapper").animate({ "left": -left }, 600 );
+  });
+
+});
+
+
+
+</script>
+
+<link href='http://fonts.googleapis.com/css?family=Cabin|Nixie+One|Neucha|Rock+Salt' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<!-- <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"> -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<style>
+
+body {
+  font-family: 'Cabin', arial;
+  text-shadow: 0 1px 0 #efefef
+  font-size: 1em;
+  background: #fff;
+  color: #2384de;
+  /*background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/stressed_linen.png);*/
+}
+
+.container {
+  overflow: hidden;
+  margin: 20px auto;
+  width: 1070px;
+}
+
+p {
+  word-wrap: break-word;
+  text-align: justify;
+  line-height: 1.3em;
+}
+
+h1 {
+  font-size: 20em;
+  line-height: .7em;
+  font-family: 'Neucha', cursive;
+  text-align: left;
+  float: left;
+}
+
+.first-name {
+  padding-top: 40px;
+}
+
+.last-name {
+  margin-top: -300px;
+  letter-spacing: -4px;
+  color: #09A;
+  opacity: 0.1;
+}
+
+hr {
+  border-top: 1px dotted #555;
+  border-bottom: 1px dotted #9E9E9E;
+}
+
+a {
+  color: #FF9073;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-left: 10px;
+  z-index: 4000;
+}
+
+a:hover {
+  color: #FF9073;
+  color: #09A;
+  text-decoration: none;
+}
+
+.email-reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  color: #FF9073;
+}
+
+.span3 {
+  margin-left: 20px;
+  text-align: center;
+}
+
+.sections-row {
+  padding-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#display-area-wrapper {
+  position: relative;
+  left: 0;
+  width: 6000px;
+  height: 100%;
+}
+
+.content {
+  width: 1040px;
+  height: 100%;
+  float: left;
+  padding: 20px;
+}
+
+i:hover {
+  color: #09A;
+}
+  
+</style>
+</script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div id="display-area-wrapper">
+
+      <div class="content" data-content="intro">
+        <div class="clearfix"></div>
+        <p>Hello. I'm Kim, and I like making cool things with great people. I do primarily web programming in Rails, although I've dabbled in and enjoy mobile too. I'm currently working at Kemists and finishing my BS in computer science at Pitt.
+        <a href="http://www.linkedin.com/in/kimcooperrider"><i class="icon-linkedin-sign"></i></a>&nbsp;&nbsp;&nbsp;
+        <span class="email-reverse">moc.liamg@redirrepoocmik</span>
+        </p>
+      </div>
+      
+      <div class="content" data-content="education">
+        <h3>Education</h3>
+        
+        <h4>University of Pittsburgh</h4>
+        <div class="date">Anticipated graduation 12/2013</div>
+        Computer science major<br>
+        Software engineering concentration & french minor<br>
+        GPA 3.5<br>
+        
+        <h4>SKEMA Business School</h4>
+        <div class="date">1 - 5/2011</div>
+        Antibes, France
+                        
+        <h4>Past relevant coursework</h4>
+        Data Structures, Assembly Language & Comp Organization, <a target="_blank" href="http://connactiv.com/">Software Engineering</a>, Database Management Systems,
+        Algorithm Implementation, <a target="_blank" href="http://zebrafishtec.com">Mobile UI</a>, Intro to Systems Software
+        
+        <h4>Presently taking</h4>
+        None
+      </div>
+      
+      <div class="content" data-content="skills">
+        <h3>Skills</h3>
+        <h4>Programming</h4> Java (OOP), JDBC, Git, Ruby on Rails & CodeIgniter (MVC), Databases (MySQL, SQL), PHP, Android & Objective-C (mobile)<br>
+        <h4>Front-end</h4> CSS, HTML, JavaScript, jQuery<br>
+        <h4>Programs</h4> Photoshop, Eclipse, Netbeans, XCode
+      </div>
+
+      <div class="content" data-content="experience">
+        <h3>Experience</h3>
+     
+        <div class="row">
+          <div class="span10"><h4>Software Engineering Intern</h4></div>
+          <div class="span3">6/2012 - present</div>
+        </div>
+          Kemists - Remote/Pittsburgh, PA<br>
+          <ul class="description">
+            <li>iPhone app development.</li>
+            <li>Objective-C.</li>
+          </ul>
+      
+        <div class="row">
+          <div class="span10"><h4>Web Developer</h4></div>
+          <div class="span3">1/2012 - present</div>
+        </div>
+          University of Pittsburgh Intramurals Office - Pittsburgh, PA<br/>
+          <ul class="description">
+            <li>Improvements to Pitt's <a target="_blank" href="http://www.intramurals.pitt.edu/">intramural sports website.</a></li>
+            <li>CSS, HTML, jQuery, PHP.</li>
+          </ul>
+      
+        <div class="row">
+          <div class="span10"><h4>Web Development Intern</h4></div>
+          <div class="span3">9/2011 - 12/2011</div>
+        </div>
+          Fireman Creative - Pittsburgh, PA<br/>
+          <ul class="description">
+            <li>Developed front- and back-end features for client websites.</li>
+            <li>CSS, CodeIgniter, HTML, jQuery, PHP.</li>
+          </ul>
+      
+        <div class="row">
+          <div class="span10"><h4>Technology Research Intern</h4></div>
+          <div class="span3">6/2011 - 9/2011</div>
+        </div>
+          The Bank of New York Mellon - Pittsburgh, PA<br/>
+          <ul class="description">
+            <li>Reengineered a Sencha Touch iPad app into a mobile website as a proof-of-concept.</li>
+            <li>Ajax, CSS, HTML, jQuery, jQuery Mobile, jQTouch.</li>
+          </ul>
+      
+        <div class="row">
+          <div class="span10"><h4>Web Application Development Intern</h4></div>
+          <div class="span3">5/2010 - 11/2010</div>
+        </div>
+          ModCloth - Pittsburgh, PA<br/>
+          <ul class="description">
+            <li>Developed front- and back-end features for the eCommerce site.</li>
+            <li>CSS, HTML, JavaScript, SQL, Ruby on Rails.</li>
+          </ul>
+    </div>
+
+      <div class="content" data-content="volunteerism">
+        <h3>Volunteerism</h3>
+        
+        <div class="row">
+          <div class="span10"><h4>jQuery Events Volunteer</h4></div>
+          <div class="span3">10/2011 - present</div>
+        </div>
+        
+        <div class="row">
+          <div class="span10"><h4>J. Boye Conference Volunteer</h4></div>
+          <div class="span3">5/2012</div>
+          Philadelphia, PA
+        </div>
+
+    </div>
+  </div> <!-- #display-area-wrapper -->
+
+    <div class="row sections-row">
+    <hr/>
+      <div class="span12">
+        <div class="span3 icon-container" data-section="intro">
+          <i class="icon icon-asterisk icon-2x"></i>
+          <h3>About</h3>
+        </div>
+        <div class="span3 icon-container" data-section="education">
+          <i class="icon icon-book icon-2x"></i>
+          <h3>Education</h3>
+        </div>
+        <div class="span3 icon-container" data-section="skills">
+          <i class="icon icon-check icon-2x"></i>
+          <h3>Skills</h3>
+        </div>
+        <div class="span3 icon-container" data-section="experience">
+          <i class="icon icon-briefcase icon-2x"></i>
+          <h3>Experience</h3>
+        </div>
+        <div class="span3 icon-container" data-section="volunteerism">
+          <i class="icon icon-heart icon-2x"></i>
+          <h3>Volunteerism</h3>
+        </div>
+      </div> <!-- .span12 -->
+    </div> <!-- .sections-row -->
+
+  </div><!-- .container -->
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<META name="description" content="Undergraduate computer science student eager to learn more about web development.">
+<META name="keywords" content="web developer, student, computer science, software engineer, front-end, creative, undergraduate, intern, web application, development">
+
+<title>K. Cooperrider</title>
+
+<!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Cabin|Droid+Sans|Nixie+One|Rock+Salt' rel='stylesheet' type='text/css'>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="style.css" rel="stylesheet">
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$('.nav').click(function() {
+		t = this.id;
+		sect = '#text_' +t;
+		off = $(sect).offset().top;
+		if (t != 'about') { 
+			$('html, body').animate({ scrollTop:off },'slow');
+		} else {
+			$('html, body').animate({ scrollTop:0 },'slow');
+		}
+		$(this).activate();
+	});
+	
+	$('#top').click(function(e) {
+			e.preventDefault();
+			$('.nav').removeClass('active');
+			$('html, body').animate({ scrollTop:0 },'slow');
+	});
+
+	$('.description').hide();
+
+	$('#toggle_descrips').click(function(e) {
+		e.preventDefault();
+		$('.description').slideToggle();
+
+	});
+	
+	$(window).bind('scroll', function() {
+	  $.each($('.text'), function() {
+			var sect = $(this);
+			if (sect.isScrolledIntoView()) {
+				var el = $(this).attr('id').split('_')[1];
+				$('#'+el).activate();
+			}
+		});
+	}); // scroll
+		
+});
+
+$.fn.isScrolledIntoView = function() {
+
+	var elem = $(this);
+	
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+$.fn.activate = function() {
+	var el = $(this);
+	el.siblings().removeClass('active');
+	el.addClass('active');
+};
+
+</script>
+
+<script type="text/javascript">
+
+  // var _gaq = _gaq || [];
+  // _gaq.push(['_setAccount', 'UA-26307743-1']);
+  // _gaq.push(['_trackPageview']);
+
+  // (function() {
+  //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  // })();
+
+</script>
+
+</head>
+<body>
+		
+	<header>
+
+		<nav id="nav">
+			<div class="nav" id="about">About</div>
+			<div class="nav" id="skills">Skills</div>
+			<div class="nav" id="experience">Experience</div>
+			<div class="nav" id="education">Education</div>
+			<div class="nav" id="volunteerism">Volunteerism</div>
+		</nav>
+
+	</header>
+
+<div id="container">
+
+					<div class="text" id="text_about">
+
+								<div id="intro_header"><h1>Hello! I'm Kim.</h1></div>
+								
+								I'm a CS major taking a victory lap aka fifth year at the University of Pittsburgh,  
+								so I'll be graduating Spring of 2013.
+
+								<p>I like traveling. I speak french and am hopelessly addicted to Diet Coke. I like running (most days), hanging with friends, and eating Razzy Fresh. 
+								My favorite place in the world is Spooner, Wisconsin, with Plitvice, Croatia as a close second. Feel free to ask me why!</p>
+								
+								<p>As a programmer, I like solving problems. And I especially like doing that when I'm on a team of cool people. I dig both web and mobile, and I'm always up for learning something new.</p>
+								
+								<p>Email me at <a class="special" href="mailto:kim.cooperrider&#64;&#103;&#109;&#97;&#105;&#108;&#46;com">kim.cooperrider&#64;&#103;&#109;&#97;&#105;&#108;&#46;com.</a>&nbsp;&nbsp;
+								
+								<a href="http://www.linkedin.com/pub/kim-cooperrider/39/828/2b8" style="text-decoration:none;">
+									<img src="http://www.linkedin.com/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Kim Cooperrider's LinkedIn profile" style="vertical-align:middle" border="0">
+								</a>
+							
+								</p>
+					</div><!-- text_about -->
+							
+				<div id="fancy"></div>
+		
+				<div class="text" id="text_skills">
+				
+					<h2 class="higher">Skills</h2>
+						<h4>Programming</h4> Java (OOP), JDBC, Git, Ruby on Rails & CodeIgniter (MVC), Databases (MySQL, SQL), PHP, Android & Objective-C (mobile)<br>
+						<h4>Front-end</h4> CSS, HTML, JavaScript, jQuery<br>
+						<h4>Programs</h4> Photoshop, Eclipse, Netbeans, XCode
+				
+				</div><!-- text_skills -->
+				<div class="thin_fancy"></div>
+				
+				<div class="text" id="text_experience">
+					<h2>Experience</h2>
+					<div id="toggle_descrips"><a href="">Toggle descriptions&nbsp;&raquo;</a></div>
+					
+					<h4>Software Engineering Intern</h4>
+						<div class="date">6/2012 - present</div>
+						Kemists - Remote/Pittsburgh, PA<br>
+						<ul class="description">
+							<li>iPhone app development.</li>
+							<li>Objective-C.</li>
+						</ul>
+					
+					<h4>Web Developer</h4>
+						<div class="date">1/2012 - present</div>
+						University of Pittsburgh Intramurals Office - Pittsburgh, PA<br/>
+						<ul class="description">
+							<li>Improvements to Pitt's <a target="_blank" href="http://www.intramurals.pitt.edu/">intramural sports website.</a></li>
+							<li>CSS, HTML, jQuery, PHP.</li>
+						</ul>
+					
+					<h4>Web Development Intern</h4>
+						<div class="date">9/2011 - 12/2011</div>
+						Fireman Creative - Pittsburgh, PA<br/>
+						<ul class="description">
+							<li>Developed front- and back-end features for client websites.</li>
+							<li>CSS, CodeIgniter, HTML, jQuery, PHP.</li>
+						</ul>
+					
+					<h4>Technology Research Intern</h4>
+						<div class="date">6/2011 - 9/2011</div>
+						The Bank of New York Mellon - Pittsburgh, PA<br/>
+						<ul class="description">
+							<li>Reengineered a Sencha Touch iPad app into a mobile website as a proof-of-concept.</li>
+							<li>Ajax, CSS, HTML, jQuery, jQuery Mobile, jQTouch.</li>
+						</ul>
+					
+					<h4>Web Application Development Intern</h4>
+						<div class="date">5/2010 - 11/2010</div>
+						ModCloth - Pittsburgh, PA<br/>
+						<ul class="description">
+							<li>Developed front- and back-end features for the eCommerce site.</li>
+							<li>CSS, HTML, JavaScript, SQL, Ruby on Rails.</li>
+						</ul>
+
+				</div><!-- text_experience -->
+				<div class="thin_fancy"></div>
+
+				<div class="text" id="text_education">
+					
+					<h2>Education</h2>
+					
+							<h4>University of Pittsburgh</h4>
+							<div class="date">Anticipated graduation 5/2013</div>
+							Computer science major<br>
+							Software engineering concentration & french minor<br>
+							GPA 3.5<br>
+							
+							<h4>SKEMA Business School</h4>
+							<div class="date">1 - 5/2011</div>
+							Antibes, France
+															
+							<h4>Past relevant coursework</h4>
+							Data Structures, Assembly Language & Comp Organization, <a target="_blank" href="http://connactiv.com/">Software Engineering</a>, Database Management Systems,
+							Algorithm Implementation, <a target="_blank" href="http://zebrafishtec.com">Mobile UI</a>, Intro to Systems Software
+							
+							<h4>Presently taking</h4>
+							None
+
+				</div><!-- text_education -->
+				<div class="thin_fancy"></div>
+
+				<div class="text" id="text_volunteerism">
+
+					<h2>Volunteerism</h2>
+						
+						<h4>jQuery Conference Volunteer</h4>
+						<div class="date">10/2011</div>
+						Boston, MA 
+						<br>
+						<div class="date">6/2012</div>
+						San Francisco, CA
+						
+						<h4>J. Boye Conference Volunteer</h4>
+						<div class="date">5/2012</div>
+						Philadelphia, PA
+
+				</div> <!-- text_volunteerism -->
+				<div class="thin_fancy"></div>
+
+			
+			<a href="#" id="top">Wanna go back up?</div>
+</div>
+
+</body>
+</html>
