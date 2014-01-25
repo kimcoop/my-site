@@ -66,7 +66,9 @@ strong {
 */
 
 section {
-  background: $color-faded;
+  background: black;
+  background: $color-3;
+  min-height: 50px;
 }
 
 .container {
@@ -77,7 +79,7 @@ section {
 }
 
 .container-video {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   top: 0;
   left: 0;
@@ -124,7 +126,7 @@ section {
   span {
     padding: 15px 10px 8px;
     vertical-align: middle;
-    background: $color-faded;
+    // background: $color-faded;
   }
 }
 
@@ -177,3 +179,56 @@ video {
 blockquote {
   font-size: 2em;
 }
+
+/*
+*= CIRCLE
+*/
+
+$size-circle: 240px;
+
+.section-circle {
+  background: $color-2;
+  padding: 10px 0 60px;
+  position: relative;
+  min-height: $size-circle + 150px;
+
+  .container {
+    position: absolute;
+    height: $size-circle; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -($size-circle)/2;
+    margin-left: -($size-circle)/2;
+  }
+}
+
+.circle {
+  @include border-radius(50%);
+  @include rotate(-10deg);
+  @include transition( all 400ms ease );
+  width: $size-circle;
+  height: $size-circle;
+  vertical-align: middle;
+  display: table-cell;
+  background: $color-primary;
+  color: $color-3;
+  span {
+    display: block;
+    text-align: center;
+    &:first-child {
+      font-family: $ostrich-italic;
+      font-style: italic;
+      font-size: 4em;
+      margin-left: -0.15em;
+    }
+    &:last-child {
+      font-family: $ostrich-black;
+      font-size: 2em;
+    }
+  }
+  &:hover {
+    @include rotate(360deg);
+  }
+}
+

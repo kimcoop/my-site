@@ -2,9 +2,16 @@
 
 var MainCtrl = angular.module('mySiteApp').controller('MainCtrl', function ($scope) {
 
-  $scope.invert = function() {
-    $scope.isInverted = !$scope.isInverted;
-  };
+
+  $scope.nouns = [
+    "Web developer",
+    "Runner",
+    "Green smoothie drinker",
+    "CS undergraduate",
+    "Philadelphia native",
+    "Pittsburgh lover",
+    "French speaker"
+  ];
 
 
 });

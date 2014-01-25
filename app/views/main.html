@@ -1,7 +1,7 @@
 
-<div class="container-video">
+<div class="container-video" scroll>
   <!-- autoplay="autoplay" -->
-  <video loop="" muted="muted" preload="auto">
+  <video loop  muted preload="auto">
     <source src="https://mtc.cdn.vine.co/r/videos/0B59A82C271032148996401303552_14fae0e35d2.4.6.2380158491759996656_nfB6hXphzfMfTKLu0qwBIFUI678aqpzbrg8Tcz6PslLRXIZx8G.O6b.MH8SKh4NF.mp4?versionId=raidhxDqnk09zNWprNedzC337XncXRZd" type="video/mp4">
     </video>
 </div>
@@ -22,16 +22,21 @@
 </div>
 
 
-<section>
+
+<section class="section-nouns" slow>
   <div class="container container-nouns">
     <ul class="list-nouns">
-      <li><span>Web developer</span></li>
-      <li><span>Runner</span></li>
-      <li><span>Green smoothie drinker</span></li>
-      <li><span>CS undergraduate</span></li>
-      <li><span>Philadelphia native</span></li>
-      <li><span>Pittsburgh lover</span></li>
-      <li><span>French speaker</span></li>
+      <li ng-repeat="noun in nouns"><span>{{ noun }}</span></li>
+  </div>
+</section>
+
+
+<section class="section-circle">
+  <div class="container">
+    <div class="circle">
+      <span>Thanks</span>
+      <span>for visiting!</span>
+    </div>
   </div>
 </section>
 
