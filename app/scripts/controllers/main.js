@@ -5,12 +5,14 @@ var MainCtrl = angular.module('mySiteApp').controller('MainCtrl', function ($sco
 
   $scope.nouns = [
     "Web developer",
-    "Runner",
-    "Green smoothie drinker",
     "CS undergraduate",
+    "Green smoothie drinker",
+    "Sometimes runner",
     "Philadelphia native",
     "Pittsburgh lover",
-    "French speaker"
+    "French speaker",
+    "Northwoods fan",
+    "Pinochle player"
   ];
 
 

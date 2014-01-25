@@ -192,15 +192,14 @@ $size-circle: 240px;
 
 .section-circle {
   background: $color-2;
-  padding: 10px 0 60px;
   position: relative;
-  min-height: $size-circle + 150px;
+  height: $size-circle - $size-circle/5;
 
   .container {
     position: absolute;
     height: $size-circle; 
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
     margin-top: -($size-circle)/2;
     margin-left: -($size-circle)/2;
@@ -229,6 +228,14 @@ $size-circle: 240px;
     &:last-child {
       font-family: $ostrich-black;
       font-size: 2em;
+      &:after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 70%;
+        background: $color-3;
+        margin: 0 auto;
+      }
     }
   }
   &:hover {
