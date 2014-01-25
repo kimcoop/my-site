@@ -4,7 +4,7 @@ var MainCtrl = angular.module('mySiteApp').controller('MainCtrl', function ($sco
 
   $scope.invert = function() {
     $scope.isInverted = !$scope.isInverted;
-  }
+  };
 
 
 });

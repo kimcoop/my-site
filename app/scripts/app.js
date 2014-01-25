@@ -12,7 +12,7 @@ myApp
       .otherwise({
         redirectTo: '/'
       });
-  })
+  });
 
 
   // .factory('DataService', function() {
