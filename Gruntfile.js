@@ -33,6 +33,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass']
       },
+      fonts: {
+        files: ['<%= yeoman.app %>/styles/fonts/*'],
+        tasks: ['copy:server']
+      },
       livereload: {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
@@ -242,6 +246,27 @@ module.exports = function (grunt) {
       }
     },
     copy: {
+      server: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>',
+          flatten: true,
+          dest: '.tmp/styles/fonts/',
+          src: [
+            'styles/fonts/*'
+          ]
+        }]
+      // server: {
+      //   files: [{
+      //     expand: true,
+      //     flatten: true,
+      //     cwd: '<%= yeoman.app %>',
+      //     dest: '<%= yeoman.dist %>/styles/fonts/',
+      //     src: [
+      //       'styles/fonts/*'
+      //     ]
+      //   }]
+      },
       dist: {
         files: [{
           expand: true,
