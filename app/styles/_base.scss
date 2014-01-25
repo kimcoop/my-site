@@ -2,11 +2,10 @@
 
 $color-primary: #d02052;
 $color-secondary: #ffffcc; // yellow
+$color-2: #ffffcc; // yellow
 $color-3: #f4a100; // orange
 $color-4: #c5c4e3; // purple
 $color-white: #fff;
-
-
 
 $color-light: #f3f3f3;
 
@@ -22,7 +21,17 @@ $color-faded: rgba( 0, 0, 0, 0.7 );
 $font-family-primary: 'Nixie One', times;
 $font-family-secondary: 'Lobster', arial;
 
-$width-container: 600px;
+$width-primary: 670px;
 
 $font-size-primary: 21px;
 $font-size-small: 14px;
+
+$ostrich-light: 'Ostrich Sans Light';
+$ostrich-dashed: 'Ostrich Sans Dashed';
+$ostrich-rounded: 'Ostrich Sans Rounded';
+$ostrich-inline: 'Ostrich Sans Inline';
+$ostrich-italic: 'Ostrich Sans Inline';
+$ostrich-black: 'Ostrich Sans Black';
+
+$size-icon: 60px;
+$margin-icon: 5px;

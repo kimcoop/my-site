@@ -3,10 +3,10 @@
 }
 
 body {
-  font-family: $font-family-primary;
+  font-family: $ostrich-rounded;
   font-size: $font-size-primary;
   background: black;
-  color: black;
+  color: $color-2;
 }
 
 
@@ -23,90 +23,157 @@ a {
     text-decoration: none;
     color: $color-primary;
   }
-  &:hover {
+  &:hover, &:focus {
     color: $color-primary;
   }
 }
 
+h1, h2, h3 {
+  color: $color-secondary;
+}
+
+h1 {
+  font-family: $ostrich-dashed;
+  font-size: 10em;
+  margin: 0;
+  &.large {
+    font-size: 23em;
+    letter-spacing: 0.27em;
+    margin-left: 0.05em;
+    margin-right: -0.27em;
+    margin-bottom: -0.2em;
+  }
+  &.medium {
+    font-family: $ostrich-light;
+    font-size: 10em;
+  }
+}
+
+p {
+  line-height: 1.5em;
+}
+
+em {
+  font-family: $ostrich-italic;
+}
+
+strong {
+  font-family: $ostrich-black;
+  font-weight: normal;
+}
 /*
 *= Elements
 */
 
-.container {
-  margin: 0 auto;
-  width: 500px;
+section {
+  background: $color-faded;
 }
 
-.container-footer {
-  position: absolute;
-  top: 20px;
-  right: 0;
-  width: 120px;
+.container {
+  margin: 0 auto;
+  width: $width-primary;
+  padding: 20px 0;
   text-align: center;
 }
 
 .container-video {
   position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .container-name {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  height: 600px;
-  top: 50%;
-  margin-top: -300px;
-  overflow: hidden;
-  margin-left: 15px;
+  padding: 0;
+  margin: 100px auto;
+  position: relative;
+  &:before, &:after {
+    content: '';
+    height: 2px;
+    background: $color-secondary;    
+    position: absolute;
+    bottom: $size-icon/2;
+    left: 0;
+    width: ($width-primary / 2) - $size-icon - 3*$margin-icon;
+  }
+  &:after {
+    right: 0;
+    left: auto;
+  }
 }
 
-h1 {
-  font-family: 'Ostrich Sans Dashed';
-  font-size: 10em;
-  text-rendering: optimizeLegibility;
+.container-nouns {
+  padding: 150px 0;
+}
+
+.list-nouns {
+  list-style-type: none;
+  font-size: 2em;
   margin: 0;
-  &.large {
-    font-size: 23em;
-    letter-spacing: 0.27em;
-    margin-right: -0.27em;
-    margin-bottom: -0.2em;
+  padding: 0;
+  li {
+    display: block;
+    text-align: center;
+    margin: 30px 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
-  &.medium {
-    font-family: 'Ostrich Sans Light';
-    font-size: 10em;
+  span {
+    padding: 15px 10px 8px;
+    vertical-align: middle;
+    background: $color-faded;
   }
 }
+
+
+/*
+*= VIDEO
+*/
+
 
 video {
   width: 100%;
 }
 
-footer {
+/*
+*= ICONS
+*/
+
+.icons {
   font-size: $font-size-small;
-  color: $color-primary;
+  margin-top: 50px;
   a {
-    display: block;
-    margin-bottom: 5px;
+    display: inline-block;
+    margin-right: $margin-icon;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   .icon {
     @include border-radius( 50% );
     @include transition( all 150ms ease );
     vertical-align: middle;
     text-align: center;
-    font-size: 40px;
-    line-height: 80px;
-    width: 80px;
-    height: 80px;
-    background: $color-3;
-    background: $color-faded;
-    &:hover {
-      background: $color-secondary;
-    }
-    &.fa-bolt {
-      padding-left: 1px;
+    font-size: $size-icon/2;
+    line-height: $size-icon;
+    width: $size-icon;
+    height: $size-icon;
+    color: $color-4;
+    border: 2px solid $color-4;
+    &:hover, &:focus {
+      border-color: $color-primary;
+      color: $color-primary;
     }
   }
+}
+
+/*
+*= QUOTE
+*/
+
+blockquote {
+  font-size: 2em;
 }
