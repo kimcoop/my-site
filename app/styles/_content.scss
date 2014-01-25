@@ -1,0 +1,136 @@
+* {
+  @include box-sizing( border-box );
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-primary;
+  line-height: 1.5em;
+}
+
+.parent {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: lighten($color-4, 10%);
+  color: $color-3;
+  &.inverted {
+    background: lighten($color-primary, 10%);
+
+    .intro {
+      color: $color-4;
+    }
+
+    .main {
+      background: lighten($color-3, 10%);
+      border-top: 6px solid lighten($color-secondary, 5%);
+      border-bottom: 10px solid $color-secondary;
+    }
+
+    #content {
+      .word {
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+
+    footer {
+      color: $color-4;
+      .icon {
+        background: $color-secondary;
+        &:hover {
+          background: $color-3;
+        }
+      }
+    }
+
+  }
+}
+
+
+/*
+*= Typography
+*/
+
+h1 {
+  font-size: 54px;
+  font-weight: 300;
+  font-family: $font-family-secondary;
+  color: $color-primary;
+}
+
+a {
+  text-decoration: none;
+  color: $color-primary;
+  &:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-primary;
+  }
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+p {
+  font-weight: 200;
+  line-height: 30px;
+}
+
+.container {
+  width: $width-container;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+header {
+  margin-top: 150px;
+  margin-bottom: 20px;
+}
+
+.main {
+  padding-top: 20px;
+  padding-bottom: 23px;
+  color: $color-secondary;
+  background: lighten($color-primary, 10%);
+  border-top: 6px solid lighten($color-3, 10%);
+  border-bottom: 10px solid $color-3;
+}
+
+#content {
+  .word {
+    @include transition( all 150ms linear );
+    &:hover {
+      color: $color-3;
+    }
+  }
+}
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: $font-size-small;
+  color: $color-primary;
+  a {
+    display: inline-block;
+  }
+  .icon {
+    @include border-radius( 50% );
+    @include transition( all 300ms ease );
+    font-size: 19px;
+    vertical-align: middle;
+    padding-top: 7px;
+    text-align: center;
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    background: $color-3;
+    &:hover {
+      background: $color-secondary;
+    }
+    &.fa-bolt {
+      padding-left: 1px;
+    }
+  }
+}

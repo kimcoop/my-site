@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('mySiteApp', [])
+var myApp = angular.module('mySiteApp', []);
+
+myApp
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -10,4 +12,11 @@ angular.module('mySiteApp', [])
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+
+
+  // .factory('DataService', function() {
+  //   return {
+  //     isInverted : false
+  //   };
+  // });
