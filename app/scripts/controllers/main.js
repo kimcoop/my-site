@@ -16,11 +16,18 @@ var MainCtrl = angular.module('mySiteApp').controller('MainCtrl', function ($sco
   ];
 
   $scope.videoIsPlaying = true;
+  $scope.video = document.querySelector('video');
 
   $scope.toggleVideo = function() {
     $scope.videoIsPlaying = !$scope.videoIsPlaying;
-  }
 
+    if ( $scope.videoIsPlaying ) {
+      $scope.video.play();
+    } else {
+      $scope.video.pause();
+    }
+
+  }
 
 });
 
