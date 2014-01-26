@@ -1,5 +1,5 @@
 
-<div class="container-video" scroll>
+<div class="container-video" scroll ng-class="{ playing : videoIsPlaying, paused : !videoIsPlaying }">
   <!-- autoplay="autoplay" -->
   <video loop  muted preload="auto">
     <source src="https://mtc.cdn.vine.co/r/videos/0B59A82C271032148996401303552_14fae0e35d2.4.6.2380158491759996656_nfB6hXphzfMfTKLu0qwBIFUI678aqpzbrg8Tcz6PslLRXIZx8G.O6b.MH8SKh4NF.mp4?versionId=raidhxDqnk09zNWprNedzC337XncXRZd" type="video/mp4">
@@ -16,6 +16,9 @@
     <a href="http://www.linkedin.com/in/kimcooperrider">
       <i class="icon fa fa-linkedin"></i>
     </a>
+    <a href="" ng-click="toggleVideo()">
+      <i class="icon fa" ng-class="{ 'fa-pause' : videoIsPlaying, 'fa-play' : !videoIsPlaying }"></i>
+    </a>
     <a href="mailto:kim.cooperrider@gmail.com">
       <i class="icon fa fa-envelope-o"></i>
     </a>
@@ -28,7 +31,12 @@
 <section class="section-nouns" slow>
   <div class="container container-nouns">
     <ul class="list-nouns">
-      <li li-scroll ng-repeat="noun in nouns"><span>{{ noun }}</span></li>
+      <li li-scroll ng-repeat="noun in nouns">
+        <span ng-show="!noun.link">{{ noun.name }}</span>
+        <a ng-show="noun.link" target="_blank" href="{{ noun.link }}">
+          {{ noun.name }}
+        </a>
+      </li>
   </div>
 </section>
 
